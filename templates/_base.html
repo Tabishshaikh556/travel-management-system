@@ -44,38 +44,25 @@
             <ul class="navbar-nav flex-row me-md-auto d-md-flex me-auto px-2 mb-2 mb-lg-0">
               
               <li class="nav-item p-2">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'contact' %}">Terms $ services</a>
+                <a class="nav-link active" href="{% url 'contact' %}">Contact us</a>
               </li>
               <li class="nav-item p-2">
-                <a class="nav-link active" href="#">About Us</a>
+                <a class="nav-link active" href="{% url 'aboutus' %}">About Us</a>
               </li>
-              {% if user.is_authenticated %}
+
               <li class="nav-item p-2">
-                <a class="nav-link active" href="#">Contact</a>
+                <a class="nav-link active" href="{% url 'privacypolicy' %}">Privacy Policy</a>
               </li>
-              <li class="nav-item p-2 dropdown">
-                <a class="nav-link active dropdown-toggle " style="text-transform: uppercase;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  {{ user.username }}
+              <li class="nav-item p-2">
+                <a class="nav-link active" href="{% url 'help' %}">Help</a>
+              </li>
+
                 </a>
               </a>
-              <ul class="dropdown-menu p-2" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">My Basket</a></li>
-                <li><a class="dropdown-item" href="#">My Order</a></li>
-                <li><a class="dropdown-item" href="#">profile</a></li>
-                <li><a class="dropdown-item" href="#">Log out</a></li>
-                {% else %}
-                <li class="nav-item p-2 dropdown">
-                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Account
-                </a>
-                <ul class="dropdown-menu p-2" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Sign In</a></li>
-                  <li><a class="dropdown-item" href="#">Registration</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  {% endif %}
+
                 </ul>
               </li>
             </ul>
@@ -109,18 +96,19 @@
                       Liberty complex, PD mello road, <br>
                       Near f1 terminal, Byculla, Mumbai,<br>
                       Maharashtra 400011 <br><br>
-                       <strong>Phone:</strong> +91 8788 9569 22<br>
+                       <strong>Phone:</strong> +91 8939 69659 29<br>
                        <strong>Email:</strong> NMGTtravels556@gmail.com<br>
                      </p>
                    </div>
                    
                    <div class="footer-links pt-lg-3 mx-lg-5 px-lg-5">
-                     <h4>Useful Links</h4>
+                     <h4>Visit</h4>
                      <ul>
-                      <li><a href="#" class= " text-decoration-none fw-normal text-white"> Home</a></li>
-                      <li><a href="#" class= " text-decoration-none fw-normal text-white"> Terms & services</a></li>
-                      <li><a href="#" class= " text-decoration-none fw-normal text-white"> About Us</a></li>
-                      <li><a href="#" class= " text-decoration-none fw-normal text-white"> Contact Us</a></li>
+                    <li><a href="{% url 'home' %}" class= " text-decoration-none fw-normal text-white"> Home</a></li>
+                      <li><a href="{% url 'contact' %}" class= " text-decoration-none fw-normal text-white"> Contact Us</a></li>
+                      <li><a href="{% url 'aboutus' %}" class= " text-decoration-none fw-normal text-white"> About Us</a></li>
+                      <li><a href="{% url 'privacypolicy' %}" class= " text-decoration-none fw-normal text-white"> Privacy Policy</a></li>
+                      <li><a href="{% url 'help' %}" class= " text-decoration-none fw-normal text-white"> Help </a></li>
                      </ul>
                    </div>
                  </div>
@@ -131,7 +119,7 @@
  
                <div class="me-md-auto text-center text-md-start">
                <div class="copyright">
-               &copy; Copyright <strong><span>NMGT Tavels</span></strong> Designed by
+               &copy; Copyright <strong><span>NMGT Tavels</span></strong>
                </div>
                <div class="credits ">
                Designed by <a href="https://tabishshaikh556@gmail.com/">Tabish Shaikh</a>

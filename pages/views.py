@@ -9,7 +9,25 @@ class HomePageView(TemplateView):
 
 class ContactPageView(TemplateView):
     template_name = 'contact.html'
+
+class AboutusPageView(TemplateView):
+    template_name = 'aboutus.html'
     
+class PrivacypolicyPageView(TemplateView):
+    template_name = 'privacypolicy.html'
+
 class HelpPageView(TemplateView):
     template_name = 'help.html'
 
+class OffersnowPageView(TemplateView):
+    template_name = 'offersnow.html'
+
+class PackagesPageView(TemplateView):
+    template_name = 'packages.html'
+
+class DonationsPageView(TemplateView):
+    template_name = 'donations.html'
+
+class FeedbackPageView(TemplateView):
+    template_name = 'feedback.html'
+                
