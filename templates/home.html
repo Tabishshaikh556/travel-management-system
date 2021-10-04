@@ -66,11 +66,11 @@
                 <h2 class="card-title pb-2">Welcome to NMGT Travels</h2>
 
 
-                <div class="pt-5 pb-5 d-grid gap-4 d-md-flex  justify-content-md-start">
-                  <a href= "{% url 'offersnow' %}" class="btn btn-outline-danger me-md-2" type="button">OFFERS NOW</a>
-                <a href= "{% url 'packages' %}" class="btn btn-outline-danger me-md-2" type="button">PACKAGES</a>               
-                  <a href="{% url 'donations' %}" class="btn btn-outline-danger me-md-2 " type="button">DONATIONS</a>
-                  <a href="{% url 'feedback' %}" class="btn btn-outline-danger" type="button">FEEDBACK</a>
+                <div class="pt-18 pb-22 d-grid gap-8 d-md-flex  justify-content-md-start">
+                  <a href= "{% url 'offersnow' %}" class="btn btn-outline-danger me-md-5" type="button">OFFERS NOW</a>
+                <a href= "{% url 'packages' %}" class="btn btn-outline-danger me-md-5" type="button">PACKAGES</a>               
+                  <a href="{% url 'donations' %}" class="btn btn-outline-danger me-md-5 " type="button">DONATIONS</a>
+                  <a href="{% url 'feedback' %}" class="btn btn-outline-danger me-md-5 " type="button">FEEDBACK</a>
                 </div>
     
              
@@ -79,19 +79,36 @@
           </div>
 
           <div class="col-sm-4 pt-4 pb-5">
-            
+            <div class="card shadow">
+              <div class="card-body">
           
+               <div><h4 class="sidebar-title pt-3 pb-3">Ladakh Trip</h4></div>
 
-              </div>
+               {% for listof in destination %}
+               <div class="col">
+      
+                <!-- <div class="card shadow-sm"> -->
+                  <a class="food-image" href="#">
+                    <img class="foodimage" src="{{ listof.DestinationPicture.url}}" alt="{{ listof.title }}" width="100%" height="225" >
+                  </a>
+                   <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+         
+                   <div class="card-body">
+                     <h3 class="card-text"> {{ listof.title }}</h3>
+                     <div class="d-flex justify-content-between align-items-center">
+                     </div>
                    </div>
                 </div>     
                </div>
-
+               <div class="p-3 pt-0 d-grid  d-md-flex  justify-content-md-start">
+                <a href="#" class="btn btn-outline-danger" type="button">Book now...</a>
+              </div>
+  
 
                
-          
+             {% endfor%}
              <div class="p-3 pt-0 d-grid  d-md-flex  justify-content-md-start">
-
+              <a href="#" class="btn btn-outline-danger" type="button">Book now...</a>
             </div>
 
 
@@ -103,7 +120,10 @@
       
       </div>
 
-    </section>
+    </section> 
+
+
+    
 
    {% endblock content %}
    </div>

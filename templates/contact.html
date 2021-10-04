@@ -1,3 +1,39 @@
-<h1>feel free to contact us regarding any query or any issues . on the details given below</h1>
-<h2>email us at www.NMGTtravels556@gmail.com</h2>
-<h3>call at 8939 65659 29</h3>
+
+
+{% extends '_base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Bootstrap CSS -->
+    
+    <title>{% block title %}Home{% endblock title %}</title>
+
+  </head>
+
+ <body>
+  <div class="card p-0 mt-0 text-black">
+
+   <img src="{% static 'images/homepagepic.jpg' %}" class="card-img  " alt="image">
+   <div class="card-img-overlay">
+   {% block content %}
+
+   <h1>hello thanks for contacting</h1>
+
+
+
+   {% endblock content %}
+   </div>
+   </div>
+
+
+  </body>
+</html>

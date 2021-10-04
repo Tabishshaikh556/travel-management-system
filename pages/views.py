@@ -1,10 +1,13 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView 
+from pages.models import BookNow
 
 
-class HomePageView(TemplateView):
+class HomePageView(ListView):
+    context_object_name = 'destination'
+    model = BookNow
     template_name = 'home.html'
 
 class ContactPageView(TemplateView):
@@ -30,4 +33,8 @@ class DonationsPageView(TemplateView):
 
 class FeedbackPageView(TemplateView):
     template_name = 'feedback.html'
+
+class CustomerdetailsPageView(TemplateView):
+    template_name = 'customerdetails.html'
+        
                 
