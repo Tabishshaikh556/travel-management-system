@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class BookNow(models.Model):
@@ -9,3 +10,22 @@ class BookNow(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+class CustomerProfile(models.Model):
+    full_name= models.CharField(max_length= 100,blank= True)
+    place_you_want_to_visit= models.CharField(max_length=100,blank= True)
+    age= models.CharField(max_length= 100,blank= True)
+    gender= models.CharField(max_length= 100,blank= True)
+    contact_no =models.CharField( max_length=10,blank =True)
+    email_add= models.CharField(max_length= 100,blank= True)
+    address = models.CharField(max_length= 300,blank= True)
+
+    def __str__(self):
+        return self.full_name
+    
+    def get_absolute_url(self):
+        return reverse('thankyou')
+
+ 

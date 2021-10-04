@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.views.generic import TemplateView, ListView 
-from pages.models import BookNow
+from django.views.generic import TemplateView, ListView, CreateView
+from pages.models import BookNow,  CustomerProfile
 
 
 class HomePageView(ListView):
@@ -34,7 +34,13 @@ class DonationsPageView(TemplateView):
 class FeedbackPageView(TemplateView):
     template_name = 'feedback.html'
 
-class CustomerdetailsPageView(TemplateView):
-    template_name = 'customerdetails.html'
+class ProfileView(CreateView):
+    model = CustomerProfile
+    template_name = 'customer/customerdetails.html'
+    fields = ['full_name','age','gender','contact_no','email_add','address', 'place_you_want_to_visit']
+
+class ThankyouPageView(TemplateView):
+    template_name = 'thankyou.html'
+
         
                 

@@ -1,0 +1,65 @@
+{% extends '_base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Bootstrap CSS -->
+    
+    <title>{% block title %}Thankyou{% endblock title %}</title>
+
+  </head>
+
+
+{% block content %}
+
+
+<div class="container py-4">
+  <div class="row d-flex  align-items-center ">
+    <div class="col-black-6">
+      <div class="card pt-4 rounded-3 ">
+            <div class="card-body border-dark text-white"style="background-color: #786;">
+
+            
+              <div class="p-0 card-text">
+              <h4>THANK YOU FOR BOOKING , YOUR TICKETS WILL BE DELIVERED WITHIN 24 HOURS . HOPE TO SEE YOU ON THE JOURNEY!!! </h4>
+                  
+              
+            
+            
+            
+            </h4> Provide your feedback and let us improve , if any query contact us at the details given below 
+              
+              THANK YOU !!!
+              </h4>
+              </div>
+                <div class=" bottompadding pb-5"></div>
+                <a href="{% url 'home'%}" class="btn btn-outline-danger" type="button">Home</a>
+              </form>
+
+
+
+
+
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+    
+</html>
+
