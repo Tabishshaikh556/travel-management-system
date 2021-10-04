@@ -1,6 +1,82 @@
-<h1>NMGT Travels, is committed to maintaining the privacy of personal information that you provide to us when using the Journey Travel & Tours web site. This Privacy Policy describes how we treat personal information received about you when you visit www..com. We may make content or services from other web sites including our co-branded web sites available to you from links located on https://www.journeytours.com. These other web sites are not subject to this Privacy Policy. We recommend that you review the privacy policy at each such web site to determine how that site protects your privacy.
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    
+
+    <title>{% block title %}NMGT Travels{% endblock title %}</title>
+   
+
+     <!-- Favicons -->
+    <link href="{% static 'images/logo.png' %}" rel="icon" type= "images/png" sizes="25x25">
+    <link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">
+     <!-- Favicons end -->
+
+  </head>
+
+  <body>
+
+    <!-- top nav bar-->
+    <div class="container mb-5 pb-0 ">
+
+      <nav class="navbar mb-0 p-md-0  navbar-expand-lg navbar-dark fixed-top" style="background-color: #0f0e0f;">
+        <div class="container-md ">
+          <a class="navbar-brand py-0 " href="{% url 'home' %}">
+  
+            <img class ="py-0 my-0" src="{% static 'images/logo.png' %}" alt="image" width="88" class="d-inline-block align-middle ">
+            <b>NMGT Travels</b>
+          </a>
+  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav flex-row me-md-auto d-md-flex me-auto px-2 mb-2 mb-lg-0">
+              
+              <li class="nav-item p-2">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item p-2">
+                <a class="nav-link active" href="{% url 'contact' %}">Contact us</a>
+              </li>
+              <li class="nav-item p-2">
+                <a class="nav-link active" href="{% url 'aboutus' %}">About Us</a>
+              </li>
+
+              <li class="nav-item p-2">
+                <a class="nav-link active" href="{% url 'privacypolicy' %}">Privacy Policy</a>
+              </li>
+              <li class="nav-item p-2">
+                <a class="nav-link active" href="{% url 'help' %}">Help</a>
+              </li>
+
+                </a>
+              </a>
+
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+    {% block content %}
+
+    <h1>NMGT Travels, is committed to maintaining the privacy of personal information that you provide to us when using the NMGT Travel web site. This Privacy Policy describes how we treat personal information received about you when you visit www..com. We may make content or services from other web sites including our co-branded web sites available to you from links located on https://www.NMGTtravels.com. These other web sites are not subject to this Privacy Policy. We recommend that you review the privacy policy at each such web site to determine how that site protects your privacy.
     Privacy Policy Promise
-    While information is the cornerstone of our ability to provide superior service, our most important asset is our clients’ trust. Keeping client information secure, and using it only as our clients would want us to, is a top priority for all of us at Journey Travel & Tours. Here then, is our promise to our individual customers:
+    While information is the cornerstone of our ability to provide superior service, our most important asset is our clients’ trust. Keeping client information secure, and using it only as our clients would want us to, is a top priority for all of us at NMGT Travel . Here then, is our promise to our individual customers:
     We will safeguard, according to strict standards of security and confidentiality, any information our customers share with us.
     We will limit the collection and use of customer information to the minimum we require to deliver superior service to our customers, which includes advising our customers about our products, services and other opportunities, and to administer our business.
     We will permit only authorized employees, who are trained in the proper handling of customer information, to have access to that information. Employees who violate our Privacy Promise will be subject to our normal disciplinary process.
@@ -9,7 +85,7 @@
     Whenever we hire other organizations to provide support services, we will require them to conform to our privacy standards and to allow us to audit them for compliance.
     We will attempt to keep customer files complete, up-to-date, and accurate. We will tell our customers how and where to conveniently access their information (except when we’re prohibited by law) and how to notify us about errors which we will promptly correct.
     Information We Collect
-    General:
+    <h1></h1>General:
     When you register, and at other times, we may collect personally identifiable information from you that may include your name, address, telephone number, e-mail address, and facts about your computer. We do not, however, knowingly collect personal information from children under the age of thirteen. In addition, if a user is under 18, unless consent is obtained from your parent/guardian, you are not allowed to provide us with personal information.
     
     Web Site Usage Information: We automatically collect IP addresses and Web site usage information from you when you visit our Web site. This information helps us evaluate how our visitors and customers use and navigate our Web site on an aggregate basis, including the number and frequency of visitors and customers to each Web page, and the length of their visits.
@@ -19,16 +95,107 @@
     To send you e-mail notifications about our new or existing products and services, special offers, or to otherwise contact you.
     To enhance existing features or develop new features, products and services.
     To allow us to personalize the content and advertising that you and others see based on personal characteristics or preferences.
-    We may combine the information that we collect from you on https://www.journeytours.com with information that you provide to us in connection with your use of our other products, services and web site.
+    We may combine the information that we collect from you on https://www.NMGTtravels.com with information that you provide to us in connection with your use of our other products, services and web site.
     We may disclose and use personally identifiable information in special circumstances where it is necessary to enforce our Terms of Use (for example, when necessary to protect our intellectual property rights). We may also disclose or use your personal information when we, in good faith, believe that the law requires us to do so.
     Cookies
     We employ cookie technology to help visitors and customers move faster through our site. When you sign on to our Web site or take advantage of several key features, we may pass cookies to your computer. A cookie is a string of information that is sent by a Web site and stored on your hard drive or temporarily in your computer’s memory.
     Security
     The personally identifiable information we collect about you is stored in limited access servers. We will maintain safeguards to protect the security of these servers and your personally identifiable information.
     Internet-based Transfers
-    Given that the Internet is a global environment, using the Internet to collect and process personal data necessarily involves the transmission of data on an international basis. Therefore, by browsing https://www.journeytours.com and communicating electronically with us you acknowledge and agree to our processing of personal data in this way.
+    Given that the Internet is a global environment, using the Internet to collect and process personal data necessarily involves the transmission of data on an international basis. Therefore, by browsing https://www.NMGTtravels.com and communicating electronically with us you acknowledge and agree to our processing of personal data in this way.
     Policy Modifications
     We may change this Privacy Policy from time to time. We will post any changes here, so be sure to check back periodically. However, please be assured that if the Privacy Policy changes in the future, we will not use the personal information you have submitted to us under this Privacy Policy in a manner that is materially inconsistent with this Privacy Policy, without your prior consent.
     Comments and Questions
     If you have any questions, comments or concerns about our Privacy Policy, please contact us.
     Anywhere in the world you want to go... we can get you there!</h1>
+
+
+    
+
+    {% endblock content %}
+      <!-- ======= Footer ======= -->
+      <footer id="footer">
+        <div class="footer-top">
+          
+         <div class="container-bottom">
+ 
+           <div class="row pb-0">
+               <div class="card shadow text-white card-fluid px-4 pb-0 pt-4 w-100" style="background-color: #0f0e0f;">
+                 <div class="card-body d-inline-flex p-lg-4">
+ 
+                   <div class="footer-contact fw-normal px-lg-5">
+                     <h2 class="card-title">NMGT Travels</h2>
+                     <p>   
+                      Liberty complex, PD mello road, <br>
+                      Near f1 terminal, Byculla, Mumbai,<br>
+                      Maharashtra 400011 <br><br>
+                       <strong>Phone:</strong> +91 8939 69659 29<br>
+                       <strong>Email:</strong> NMGTtravels556@gmail.com<br>
+                     </p>
+                   </div>
+                   
+                   <div class="footer-links pt-lg-3 mx-lg-5 px-lg-5">
+                     <h4>Visit</h4>
+                     <ul>
+                    <li><a href="{% url 'home' %}" class= " text-decoration-none fw-normal text-white"> Home</a></li>
+                      <li><a href="{% url 'contact' %}" class= " text-decoration-none fw-normal text-white"> Contact Us</a></li>
+                      <li><a href="{% url 'aboutus' %}" class= " text-decoration-none fw-normal text-white"> About Us</a></li>
+                      <li><a href="{% url 'privacypolicy' %}" class= " text-decoration-none fw-normal text-white"> Privacy Policy</a></li>
+                      <li><a href="{% url 'help' %}" class= " text-decoration-none fw-normal text-white"> Help </a></li>
+                     </ul>
+                   </div>
+                 </div>
+               </div>
+             </div>
+ 
+             <div class=" container container-fluid  px-4 mx-lg-5 d-md-flex py-4">
+ 
+               <div class="me-md-auto text-center text-md-start">
+               <div class="copyright">
+               &copy; Copyright <strong><span>NMGT Tavels</span></strong>
+               </div>
+               <div class="credits ">
+               Designed by <a href="https://tabishshaikh556@gmail.com/">Tabish Shaikh</a>
+             </div>
+           </div>
+ 
+          </div>
+         </div>
+       </div>
+ 
+     </footer><!-- End Footer -->
+ 
+ 
+       <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+       <!-- Option 2: Separate Popper and Bootstrap JS -->
+ 
+   </body>
+      
+ 
+ </html>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
