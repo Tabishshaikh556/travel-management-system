@@ -1,7 +1,9 @@
 
-<!doctype html>
-<html lang="en">
+{% extends '_base.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,162 +11,62 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     
-
     <title>{% block title %}Donations{% endblock title %}</title>
-   
-
-     <!-- Favicons -->
-    <link href="{% static 'images/logo.png' %}" rel="icon" type= "images/png" sizes="25x25">
-    <link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">
-     <!-- Favicons end -->
 
   </head>
 
+  {% block content %}
   <body>
 
-    <!-- top nav bar-->
-    <div class="container mb-5 pb-0 ">
-
-      <nav class="navbar mb-0 p-md-0  navbar-expand-lg navbar-dark fixed-top" style="background-color: #0f0e0f;">
-        <div class="container-md ">
-          <a class="navbar-brand py-0 " href="{% url 'home' %}">
-  
-            <img class ="py-0 my-0" src="{% static 'images/logo.png' %}" alt="image" width="88" class="d-inline-block align-middle ">
-            <b>NMGT Travels</b>
-          </a>
-  
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav flex-row me-md-auto d-md-flex me-auto px-2 mb-2 mb-lg-0">
-              
-              <li class="nav-item p-2">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-              </li>
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'contact' %}">Contact us</a>
-              </li>
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'aboutus' %}">About Us</a>
-              </li>
-
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'privacypolicy' %}">Privacy Policy</a>
-              </li>
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'help' %}">Help</a>
-              </li>
-
-                </a>
-              </a>
-
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-
-
-    {% block content %}
-
-<h1>
-    we are happy to share that we are now tied up to an NGO which helps in grooving of kids , and senior citizens below is the deails of the NGO , if u want to donate kindly contact us and help the one !! thank you  </h1>
-<h2>NGO information
-    HelpAge India is a secular, not-for-profit organization in India, registered under the Societies’ Registration Act of 1860. Set up in 1978, the organization works for ‘the cause and care of disadvantaged older persons to improve their quality of life’ HelpAge envisions a society where elderly have the right to an active, healthy and dignified life. It recently became the first and only Indian organization to be honoured with the ‘UN Population Award 2020’ for its exemplary work in the field of ageing, relief efforts work during the Covid 19 pandemic and recognition of the organization’s outstanding contribution to population issues and efforts in the realization of older persons rights in India.
-    
-    Currently there are a projected 138 million elderly in India. HelpAge India voices their concerns, so they can lead secure & dignified lives. It works through 26 State Offices across India, runs numerous programs on-ground, addressing elder needs and advocating for their rights, such as their right to Universal Pension, quality Healthcare, action against Elder Abuse and many more at a national, state and societal level with Central and State governments. It advocates for elder friendly policies and their implementation thereof.
-    
-    The organization’s programs are focused on direct interventions in the areas of Healthcare (mobile healthcare units, cataract surgeries), Agecare (helplines, senior citizen care homes and day care centres, physiotherapy),  Livelihoods (elder-self-help groups; linkages with government schemes), Disaster Response (e.g. covid19 relief response), as well as Advocacy and Awareness on rights and policies relating to elders.
-    
-    All donations to HelpAge India are eligible for 50% tax exemption under section 80G of the Income Tax Act, 1961.</h2>
-
-</h2>
-
-
-    
-
-    {% endblock content %}
-      <!-- ======= Footer ======= -->
-      <footer id="footer">
-        <div class="footer-top">
+     <div class="about py-5 ">
+        <div class="container">
           
-         <div class="container-bottom">
- 
-           <div class="row pb-0">
-               <div class="card shadow text-white card-fluid px-4 pb-0 pt-4 w-100" style="background-color: #0f0e0f;">
-                 <div class="card-body d-inline-flex p-lg-4">
- 
-                   <div class="footer-contact fw-normal px-lg-5">
-                     <h2 class="card-title">NMGT Travels</h2>
-                     <p>   
-                      Liberty complex, PD mello road, <br>
-                      Near f1 terminal, Byculla, Mumbai,<br>
-                      Maharashtra 400011 <br><br>
-                       <strong>Phone:</strong> +91 8939 69659 29<br>
-                       <strong>Email:</strong> NMGTtravels556@gmail.com<br>
-                     </p>
-                   </div>
-                   
-                   <div class="footer-links pt-lg-3 mx-lg-5 px-lg-5">
-                     <h4>Visit</h4>
-                     <ul>
-                    <li><a href="{% url 'home' %}" class= " text-decoration-none fw-normal text-white"> Home</a></li>
-                      <li><a href="{% url 'contact' %}" class= " text-decoration-none fw-normal text-white"> Contact Us</a></li>
-                      <li><a href="{% url 'aboutus' %}" class= " text-decoration-none fw-normal text-white"> About Us</a></li>
-                      <li><a href="{% url 'privacypolicy' %}" class= " text-decoration-none fw-normal text-white"> Privacy Policy</a></li>
-                      <li><a href="{% url 'help' %}" class= " text-decoration-none fw-normal text-white"> Help </a></li>
-                     </ul>
-                   </div>
-                 </div>
-               </div>
-             </div>
- 
-             <div class=" container container-fluid  px-4 mx-lg-5 d-md-flex py-4">
- 
-               <div class="me-md-auto text-center text-md-start">
-               <div class="copyright">
-               &copy; Copyright <strong><span>NMGT Tavels</span></strong>
-               </div>
-               <div class="credits ">
-               Designed by <a href="https://tabishshaikh556@gmail.com/">Tabish Shaikh</a>
-             </div>
-           </div>
- 
-          </div>
-         </div>
-       </div>
- 
-     </footer><!-- End Footer -->
- 
- 
-       <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-       <!-- Option 2: Separate Popper and Bootstrap JS -->
- 
-   </body>
-      
- 
- </html>
- 
- 
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <!-- <img class="foodimage" src="{{ About_page.AboutPicture.url}}" alt="{{ listofpic.title }}" width="100%" height="230" > -->
+
+                    <img src="{% static 'images/ngo1.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                    <img src="{% static 'images/ngo.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                    <img src="{% static 'images/ngo2.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">NMGT TRAVELS</h5>
+                      <p class="card-text">  <h1>We are happy to share that we are now tied up to an NGO which helps in grooving of kids , and senior citizens below is the deails of the NGO . if you want to donate in any way we are happy to welcome you {ITS NOT MANADATORY } </h1>
+                        NGO information:  
+                        
+                          HelpAge India is a secular, not-for-profit organization in India, registered under the Societies’ Registration Act of 1860. Set up in 1978, the organization works for ‘the cause and care of disadvantaged older persons to improve their quality of life’ HelpAge envisions a society where elderly have the right to an active, healthy and dignified life. It recently became the first and only Indian organization to be honoured with the ‘UN Population Award 2020’ for its exemplary work in the field of ageing, relief efforts work during the Covid 19 pandemic and recognition of the organization’s outstanding contribution to population issues and efforts in the realization of older persons rights in India.
+                          
+                          Currently there are a projected 138 million elderly in India. HelpAge India voices their concerns, so they can lead secure & dignified lives. It works through 26 State Offices across India, runs numerous programs on-ground, addressing elder needs and advocating for their rights, such as their right to Universal Pension, quality Healthcare, action against Elder Abuse and many more at a national, state and societal level with Central and State governments. It advocates for elder friendly policies and their implementation thereof.
+                          
+                          The organization’s programs are focused on direct interventions in the areas of Healthcare (mobile healthcare units, cataract surgeries), Agecare (helplines, senior citizen care homes and day care centres, physiotherapy),  Livelihoods (elder-self-help groups; linkages with government schemes), Disaster Response (e.g. covid19 relief response), as well as Advocacy and Awareness on rights and policies relating to elders.
+                          
+                          All donations to HelpAge India are eligible for 50% tax exemption under section 80G of the Income Tax Act, 1961.
+                      
+                        </p>
+                      <p class="card-text"><small class="text-muted">HOPE YOU HAVE A GOOD DAY</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
 
 
 
 
+        </div>
+     
+     </div>
+    
+  </body>
+    {% endblock content %}
 
 
 
-
-
-
-
-
-
+    
+</html>
