@@ -28,11 +28,11 @@
    <body>
 
 
-    <div class="container py-4 ">
+    <div class="container py-5 ">
       <div class="row d-flex justify-content-center align-items-center ">
         <div class="col-md-5">
-          <div class="card rounded-3 ">
-                <div class="card-body border-dark text-black"style="background-color: #8696;">
+          <div class="card rounded-8 ">
+                <div class="card-body border-dark text-black"style="background-color: #fadbd8;">
     
                   <div class="text-center p-0">
                     <img src="{% static 'images/logo.png' %}"  width="40%" height="140" alt="logo">
@@ -40,14 +40,14 @@
                   </div>
                   <div class="pb-3 card-text">
                   <h2>Fill The Details Below</h2>
-                  <!-- <div class=" bottompadding pb-3"></div> -->
+                  <!-- <div class=" bottompadding pb-8"></div> -->
 
                   </div>
                   <form action= "" method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <!-- <input type="submit" value="Save" /> -->
-                    <div class=" bottompadding pb-3"></div>
+                    <div class=" bottompadding pb-9"></div>
                     <button class="btn btn-outline-success me-md-2 " type="submit" value= "save">SUBMIT</button>
                     <button class="btn btn-outline-success me-md-2 " type="reset" value= "reset">RESET</button>
                   </form>
