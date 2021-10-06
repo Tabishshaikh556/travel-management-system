@@ -31,12 +31,14 @@
 
     <div class="container mb-5 pb-0 ">
 
-      <nav class="navbar mb-0 p-md-0 navbar-expand-lg navbar-dark fixed-top" style="background-color: #000000ef;">
+      <nav class="navbar mb-0 p-md-0 navbar-expand-lg navbar-dark fixed-top" style="background-color:#000;">
         <div class="container-md ">
           <a class="navbar-brand py-0 " href="{% url 'home' %}">
   
-            <img class ="py-0 my-0" src="{% static 'images/logo.png' %}" alt="image" width="88" class="d-inline-block align-middle ">
+            <img class ="py-0 my-0 " src="{% static 'images/logo.png' %}" alt="image" width="88" class="d-inline-block align-middle ">
+           
             <b>NMGT Travels</b>
+
           </a>
   
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,20 +49,20 @@
             <ul class="navbar-nav flex-row me-md-auto d-md-flex me-auto px-2 mb-2 mb-lg-0">
               
               <li class="nav-item p-2">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                <a class="nav-link active text-warning" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'contact' %}">Contact us</a>
+                <a class="nav-link active text-warning" href="{% url 'contact' %}">Contact us</a>
               </li>
               <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'aboutus' %}">About Us</a>
+                <a class="nav-link active text-warning" href="{% url 'aboutus' %}">About Us</a>
               </li>
 
               <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'privacypolicy' %}">Privacy Policy</a>
+                <a class="nav-link active text-warning" href="{% url 'privacypolicy' %}">Privacy Policy</a>
               </li>
               <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'help' %}">Help</a>
+                <a class="nav-link active text-warning" href="{% url 'help' %}">Help</a>
               </li>
 
                 </a>
@@ -76,7 +78,7 @@
 
 
     {% block content %}
-
+    
 
 
 
@@ -90,7 +92,7 @@
          <div class="container-bottom">
  
            <div class="row pb-0">
-               <div class="card shadow text-success card-fluid px-8 pb-0 pt-4 w-100" style="background-color: #000000ef;">
+               <div class="card shadow text-info card-fluid px-8 pb-0 pt-4 w-100" style="background-color: #000000ef;">
                  <div class="card-body d-inline-flex p-lg-4">
  
                    <div class="footer-contact fw-normal px-lg-5">
@@ -125,7 +127,7 @@
                &copy; Copyright <strong><span>NMGT Tavels</span></strong>
                </div>
                <div class="credits ">
-               Designed by <div class="text-success" <a href="https://tabishshaikh556@gmail.com/">Tabish Shaikh</a>
+               Designed by <a href="https://tabishshaikh556@gmail.com/">Tabish Shaikh</a>
              </div>
            </div>
  
