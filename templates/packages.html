@@ -25,7 +25,7 @@
         <div class="container">
           
 
-            <div class="card mb-3">
+          <div class="card mb-3" style="background-color: rgb(0, 0, 0);"  >
                 <div class="row g-0">
                   <div class="col-md-4">
                     <!-- <img class="aboutus" src="{{ About_page.Abouus.url}}" alt="{{ listofpic.title }}" width="100%" height="230" > -->
@@ -37,39 +37,46 @@
                     <img src="{% static 'images/packages5.jpg' %}"  class="img " alt="about us"width="88%" height="250">
                   </div>
                   <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">NMGT TRAVELS</h5>
+                    <div class="card-body" style="background-color: rgb(10, 10, 10); " >
+                      <h5 class="card-title text-warning">NMGT TRAVELS</h5>
                       <p class="card-text"> 
-                       <h1>PACKAGE DETAILS :</h1>
-                       <h2>After purchasing any of the deals the customer wil be provided {tickets} the items mentioned below.</h2>
-                       AFTER PURCHASING ANY OF THE DEALS CUSTOMER WOULD BE PROVIDED BEST 3-4 STAR HOTELS NEARBY THEIR DESTINATION . CUSTOMER WOULD BE PROVIDED AIR / RAIL TICKETS AS PER THEIR CHOICE OR CONDITION .
+                       <h1 class="text-primary">
+                         PACKAGE DETAILS :</h1>
+                       <h2 class="text-success">
+                         After purchasing any of the deals the customer wil be provided {tickets} the items mentioned below.</h2>
+
+                       <p class="text-success">PURCHASING ANY OF THE DEALS CUSTOMER WOULD BE PROVIDED BEST 3-4 STAR HOTELS NEARBY THEIR DESTINATION . CUSTOMER WOULD BE PROVIDED AIR / RAIL TICKETS AS PER THEIR CHOICE OR CONDITION .
                        AND ALSO WE WOULD LIKE TO INFORM YOU ABOUT THE CAB SERVICES , THAT WE WILL MANAGE IT AS PER CUSTOMERS NEED BUT THE CHARGES ARE NOT 
                        INCLUDED IN THE PURCHASE SO YOU WILL HAVE TO PAY ACCORDING TO THE WAY YOU ARE USING IT . 
-                       <p> Given below are some details about the services we provide make sure to check it out for better experience</p>
-                       <p>NOTE : (CUSTOMER WOULD BE PROVIDED TICKETS ON THEIR EMAIL AND CONTACT NUMBER , AFTER PURCHASING WITHIN 24 HOURS. WE CAN ALSO GIVE COURIER OF YOUR TICKETS TO YOUR ADDRESS IF YOU WANT BUT YOU HAVE TO CONTACT US WITHIN 24 HOURS OF BOOKING AND UPDATE US . )</p>
-                       <h1> HOTEL :</h1>
-                       After purchasing any of the deals our company will make sure to get the best 3-4 star hotels around your selected detination.
+
+
+                       <p class="text-light">Given below are some details about the services we provide make sure to check it out for better experience</p>
+                       <p class="text-primary">NOTE : (CUSTOMER WOULD BE PROVIDED TICKETS ON THEIR EMAIL AND CONTACT NUMBER , AFTER PURCHASING WITHIN 24 HOURS. WE CAN ALSO GIVE COURIER OF YOUR TICKETS TO YOUR ADDRESS IF YOU WANT BUT YOU HAVE TO CONTACT US WITHIN 24 HOURS OF BOOKING AND UPDATE US . )</p>
+                       <h1 class="text-success">HOTEL :</h1>
+                       
+                       <p class="text-light"> purchasing any of the deals our company will make sure to get the best 3-4 star hotels around your selected detination.
                        With the choice of user of how long they will stay there (charges increases per time). You will be provided all the basic daily usage services . And additional Check-in and Check-out gifts provided exclusively 
                        for NMGT Travels customers. Also some vouchers which you can use for future trips through our company.
 
-                       <h1>AIR TRAVELS :</h1>
-                       After selecting your Destination , domestic air tickets from your location will be issued . All the high end airlines are 
+                       <h1 class="text-success">AIR TRAVELS :</h1>
+                       
+                       <p class="text-light"> selecting your Destination , domestic air tickets from your location will be issued . All the high end airlines are 
                        under our deals , for example- JetAirways , vistara , Air india, Spicejet ,GoAir , IndiGo ,etc  and we will ensure you 
                        that you will have the best experience . NOTE: IF THEY ASKS FOR ANY MORE CHARGES PLEASE DONOT GIVE THEM AND LET US KNOW IF THIS HAPPENS .
-                       <h1>RAIL TRAVELS :</h1>
-                       If there is no airlines available from your location to destination dont worry we will manage the top class Rail experience for you .
+                       <h1 class="text-success">RAIL TRAVELS :</h1>
+                       <p class="text-light"> If there is no airlines available from your location to destination dont worry we will manage the top class Rail experience for you .
                        First class AC tickets will be arranged for your better experience . 
-                       <h1>CAB SERVICES :</h1>
-                       To travel freely and without any disturbance we will provide cabs to you , to where ever you would like to go . It is not compulsory to book a cab form ourside you can 
+                       <h1 class="text-success">CAB SERVICES :</h1>
+                       <p class="text-light"> travel freely and without any disturbance we will provide cabs to you , to where ever you would like to go . It is not compulsory to book a cab form ourside you can 
                        have as per your choice . NOTE ( THIS SERVICE IS NOT INCLUDED IN OUR CHARGES SO YOU WILL HAVE TO PAY EXTRA CHARGES ACCORDING TO YOUR BILLS IF YOU ARE PURSUING THIS SERVICE )
                        
                        
                 
-                        <h2>
+                        <h2 class="text-light">
                             THANKYOU FOR VISITING!
                         </h2>
                         </p>
-                      <p class ="card-text"><small class="text-muted">HOPE YOU HAVE A GOOD DAY</small></p>
+                      <p class ="card-text"><small class="text-light">HOPE YOU HAVE A GOOD DAY</small></p>
 
                       <a href="{% url 'customerdetails' %}" class="btn btn-outline-success" type="button">Book Now</a>
                       <a href="{% url 'home' %}"button class="btn btn-outline-success me-md-2 " type="home" value= "save">home</a>
