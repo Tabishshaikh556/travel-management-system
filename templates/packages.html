@@ -1,6 +1,9 @@
-<!doctype html>
-<html lang="en">
+
+{% extends '_base.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,136 +11,86 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     
-
-    <title>{% block title %}Packages{% endblock title %}</title>
-   
-
-     <!-- Favicons -->
-    <link href="{% static 'images/logo.png' %}" rel="icon" type= "images/png" sizes="25x25">
-    <link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">
-     <!-- Favicons end -->
+    <title>{% block title %}Packages Details{% endblock title %}</title>
 
   </head>
 
+  {% block content %}
   <body>
 
-    <!-- top nav bar-->
-    <div class="container mb-5 pb-0 ">
-
-      <nav class="navbar mb-0 p-md-0  navbar-expand-lg navbar-dark fixed-top" style="background-color: #0f0e0f;">
-        <div class="container-md ">
-          <a class="navbar-brand py-0 " href="{% url 'home' %}">
-  
-            <img class ="py-0 my-0" src="{% static 'images/logo.png' %}" alt="image" width="88" class="d-inline-block align-middle ">
-            <b>NMGT Travels</b>
-          </a>
-  
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav flex-row me-md-auto d-md-flex me-auto px-2 mb-2 mb-lg-0">
-              
-              <li class="nav-item p-2">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-              </li>
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'contact' %}">Contact us</a>
-              </li>
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'aboutus' %}">About Us</a>
-              </li>
-
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'privacypolicy' %}">Privacy Policy</a>
-              </li>
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'help' %}">Help</a>
-              </li>
-
-                </a>
-              </a>
-
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-
-
-    {% block content %}
-
-<h1> combo packages running will be shown below</h1>
-<h2> NO PACKAGES AVAILABLE NOW!!</h2>
-<H3>Tune in for upcoming packages</H3>
-    
-
-    {% endblock content %}
-      <!-- ======= Footer ======= -->
-      <footer id="footer">
-        <div class="footer-top">
+     <div class="about py-5 ">
+        <div class="container">
           
-         <div class="container-bottom">
- 
-           <div class="row pb-0">
-               <div class="card shadow text-white card-fluid px-4 pb-0 pt-4 w-100" style="background-color: #0f0e0f;">
-                 <div class="card-body d-inline-flex p-lg-4">
- 
-                   <div class="footer-contact fw-normal px-lg-5">
-                     <h2 class="card-title">NMGT Travels</h2>
-                     <p>   
-                      Liberty complex, PD mello road, <br>
-                      Near f1 terminal, Byculla, Mumbai,<br>
-                      Maharashtra 400011 <br><br>
-                       <strong>Phone:</strong> +91 8939 69659 29<br>
-                       <strong>Email:</strong> NMGTtravels556@gmail.com<br>
-                     </p>
-                   </div>
-                   
-                   <div class="footer-links pt-lg-3 mx-lg-5 px-lg-5">
-                     <h4>Visit</h4>
-                     <ul>
-                    <li><a href="{% url 'home' %}" class= " text-decoration-none fw-normal text-white"> Home</a></li>
-                      <li><a href="{% url 'contact' %}" class= " text-decoration-none fw-normal text-white"> Contact Us</a></li>
-                      <li><a href="{% url 'aboutus' %}" class= " text-decoration-none fw-normal text-white"> About Us</a></li>
-                      <li><a href="{% url 'privacypolicy' %}" class= " text-decoration-none fw-normal text-white"> Privacy Policy</a></li>
-                      <li><a href="{% url 'help' %}" class= " text-decoration-none fw-normal text-white"> Help </a></li>
-                     </ul>
-                   </div>
-                 </div>
-               </div>
-             </div>
- 
-             <div class=" container container-fluid  px-4 mx-lg-5 d-md-flex py-4">
- 
-               <div class="me-md-auto text-center text-md-start">
-               <div class="copyright">
-               &copy; Copyright <strong><span>NMGT Tavels</span></strong>
-               </div>
-               <div class="credits ">
-               Designed by <a href="https://tabishshaikh556@gmail.com/">Tabish Shaikh</a>
-             </div>
-           </div>
- 
-          </div>
-         </div>
-       </div>
- 
-     </footer><!-- End Footer -->
- 
- 
-       <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-       <!-- Option 2: Separate Popper and Bootstrap JS -->
- 
-   </body>
-      
- 
- </html>
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <!-- <img class="aboutus" src="{{ About_page.Abouus.url}}" alt="{{ listofpic.title }}" width="100%" height="230" > -->
+
+                    <img src="{% static 'images/packages.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                    <img src="{% static 'images/packages2.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                    <img src="{% static 'images/packages3.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                    <img src="{% static 'images/packages4.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                    <img src="{% static 'images/packages5.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">NMGT TRAVELS</h5>
+                      <p class="card-text"> 
+                       <h1>PACKAGE DETAILS :</h1>
+                       <h2>After purchasing any of the deals the customer wil be provided {tickets} the items mentioned below.</h2>
+                       AFTER PURCHASING ANY OF THE DEALS CUSTOMER WOULD BE PROVIDED BEST 3-4 STAR HOTELS NEARBY THEIR DESTINATION . CUSTOMER WOULD BE PROVIDED AIR / RAIL TICKETS AS PER THEIR CHOICE OR CONDITION .
+                       AND ALSO WE WOULD LIKE TO INFORM YOU ABOUT THE CAB SERVICES , THAT WE WILL MANAGE IT AS PER CUSTOMERS NEED BUT THE CHARGES ARE NOT 
+                       INCLUDED IN THE PURCHASE SO YOU WILL HAVE TO PAY ACCORDING TO THE WAY YOU ARE USING IT . 
+                       <p> Given below are some details about the services we provide make sure to check it out for better experience</p>
+                       <p>NOTE : (CUSTOMER WOULD BE PROVIDED TICKETS ON THEIR EMAIL AND CONTACT NUMBER , AFTER PURCHASING WITHIN 24 HOURS. WE CAN ALSO GIVE COURIER OF YOUR TICKETS TO YOUR ADDRESS IF YOU WANT BUT YOU HAVE TO CONTACT US WITHIN 24 HOURS OF BOOKING AND UPDATE US . )</p>
+                       <h1> HOTEL :</h1>
+                       After purchasing any of the deals our company will make sure to get the best 3-4 star hotels around your selected detination.
+                       With the choice of user of how long they will stay there (charges increases per time). You will be provided all the basic daily usage services . And additional Check-in and Check-out gifts provided exclusively 
+                       for NMGT Travels customers. Also some vouchers which you can use for future trips through our company.
+
+                       <h1>AIR TRAVELS :</h1>
+                       After selecting your Destination , domestic air tickets from your location will be issued . All the high end airlines are 
+                       under our deals , for example- JetAirways , vistara , Air india, Spicejet ,GoAir , IndiGo ,etc  and we will ensure you 
+                       that you will have the best experience . NOTE: IF THEY ASKS FOR ANY MORE CHARGES PLEASE DONOT GIVE THEM AND LET US KNOW IF THIS HAPPENS .
+                       <h1>RAIL TRAVELS :</h1>
+                       If there is no airlines available from your location to destination dont worry we will manage the top class Rail experience for you .
+                       First class AC tickets will be arranged for your better experience . 
+                       <h1>CAB SERVICES :</h1>
+                       To travel freely and without any disturbance we will provide cabs to you , to where ever you would like to go . It is not compulsory to book a cab form ourside you can 
+                       have as per your choice . NOTE ( THIS SERVICE IS NOT INCLUDED IN OUR CHARGES SO YOU WILL HAVE TO PAY EXTRA CHARGES ACCORDING TO YOUR BILLS IF YOU ARE PURSUING THIS SERVICE )
+                       
+                       
+                
+                        <h2>
+                            THANKYOU FOR VISITING!
+                        </h2>
+                        </p>
+                      <p class ="card-text"><small class="text-muted">HOPE YOU HAVE A GOOD DAY</small></p>
+
+                      <a href="{% url 'customerdetails' %}" class="btn btn-outline-success" type="button">Book Now</a>
+                      <a href="{% url 'home' %}"button class="btn btn-outline-success me-md-2 " type="home" value= "save">home</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+
+
+
+        </div>
+     
+     </div>
+    
+  </body>
+    {% endblock content %}
+
+
+
+    
+</html>

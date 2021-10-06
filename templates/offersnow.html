@@ -1,7 +1,9 @@
 
-<!doctype html>
-<html lang="en">
+{% extends '_base.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,147 +11,67 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     
-
     <title>{% block title %}Offers Now{% endblock title %}</title>
-   
-
-     <!-- Favicons -->
-    <link href="{% static 'images/logo.png' %}" rel="icon" type= "images/png" sizes="25x25">
-    <link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">
-     <!-- Favicons end -->
 
   </head>
 
+  {% block content %}
   <body>
 
-    <!-- top nav bar-->
-    <div class="container mb-5 pb-0 ">
-
-      <nav class="navbar mb-0 p-md-0  navbar-expand-lg navbar-dark fixed-top" style="background-color: #0f0e0f;">
-        <div class="container-md ">
-          <a class="navbar-brand py-0 " href="{% url 'home' %}">
-  
-            <img class ="py-0 my-0" src="{% static 'images/logo.png' %}" alt="image" width="88" class="d-inline-block align-middle ">
-            <b>NMGT Travels</b>
-          </a>
-  
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav flex-row me-md-auto d-md-flex me-auto px-2 mb-2 mb-lg-0">
-              
-              <li class="nav-item p-2">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-              </li>
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'contact' %}">Contact us</a>
-              </li>
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'aboutus' %}">About Us</a>
-              </li>
-
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'privacypolicy' %}">Privacy Policy</a>
-              </li>
-              <li class="nav-item p-2">
-                <a class="nav-link active" href="{% url 'help' %}">Help</a>
-              </li>
-
-                </a>
-              </a>
-
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-
-
-    {% block content %}
-
-    <h1>todays offers</h1>
-    <h2>20% cashback on any trip by using HDFC, Axis Bank, and razorvisa CREDIT CARDS.  </h2>
-    <h2>HURRY UP AND GRAB IT BEFORE THE DEALS ENDS!! </h2>
-    
-
-    {% endblock content %}
-      <!-- ======= Footer ======= -->
-      <footer id="footer">
-        <div class="footer-top">
+     <div class="about py-5 ">
+        <div class="container">
           
-         <div class="container-bottom">
- 
-           <div class="row pb-0">
-               <div class="card shadow text-white card-fluid px-4 pb-0 pt-4 w-100" style="background-color: #0f0e0f;">
-                 <div class="card-body d-inline-flex p-lg-4">
- 
-                   <div class="footer-contact fw-normal px-lg-5">
-                     <h2 class="card-title">NMGT Travels</h2>
-                     <p>   
-                      Liberty complex, PD mello road, <br>
-                      Near f1 terminal, Byculla, Mumbai,<br>
-                      Maharashtra 400011 <br><br>
-                       <strong>Phone:</strong> +91 8939 69659 29<br>
-                       <strong>Email:</strong> NMGTtravels556@gmail.com<br>
-                     </p>
-                   </div>
-                   
-                   <div class="footer-links pt-lg-3 mx-lg-5 px-lg-5">
-                     <h4>Visit</h4>
-                     <ul>
-                    <li><a href="{% url 'home' %}" class= " text-decoration-none fw-normal text-white"> Home</a></li>
-                      <li><a href="{% url 'contact' %}" class= " text-decoration-none fw-normal text-white"> Contact Us</a></li>
-                      <li><a href="{% url 'aboutus' %}" class= " text-decoration-none fw-normal text-white"> About Us</a></li>
-                      <li><a href="{% url 'privacypolicy' %}" class= " text-decoration-none fw-normal text-white"> Privacy Policy</a></li>
-                      <li><a href="{% url 'help' %}" class= " text-decoration-none fw-normal text-white"> Help </a></li>
-                     </ul>
-                   </div>
-                 </div>
-               </div>
-             </div>
- 
-             <div class=" container container-fluid  px-4 mx-lg-5 d-md-flex py-4">
- 
-               <div class="me-md-auto text-center text-md-start">
-               <div class="copyright">
-               &copy; Copyright <strong><span>NMGT Tavels</span></strong>
-               </div>
-               <div class="credits ">
-               Designed by <a href="https://tabishshaikh556@gmail.com/">Tabish Shaikh</a>
-             </div>
-           </div>
- 
-          </div>
-         </div>
-       </div>
- 
-     </footer><!-- End Footer -->
- 
- 
-       <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-       <!-- Option 2: Separate Popper and Bootstrap JS -->
- 
-   </body>
-      
- 
- </html>
- 
- 
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <!-- <img class="aboutus" src="{{ About_page.Abouus.url}}" alt="{{ listofpic.title }}" width="100%" height="230" > -->
+
+                    <img src="{% static 'images/offers.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                    <img src="{% static 'images/offers2.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                    <img src="{% static 'images/offers3.jpg' %}"  class="img " alt="about us"width="88%" height="250">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">NMGT TRAVELS</h5>
+                      <p class="card-text"> 
+                        <h1>EXCLUSIVE DEALS EVERY FRIDAY </h1>
+
+                        <h2>1. Book Tickets using HDFC card and get upto 60% cashback on any of the packages. !!HURRY UP OFFER ENDS TONIGHT!! </h2>
+                        
+                        
+                        <h2>2. Get upto 20% off by using ICICI Credit card on any of the packages.!! HURRY UP OFFER ENDS SOON!! </h2>
+                      
+                <p> Stay tuned for more such offers </p>
+                     
+                
+                        <h4>
+                            THANKYOU FOR VISITING!
+                        </h4>
+                        </p>
+                      <p class="card-text"><small class="text-muted">HOPE YOU HAVE A GOOD DAY</small></p>
+
+                      <a href="{% url 'customerdetails' %}" class="btn btn-outline-success" type="button">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              
 
 
 
+        </div>
+     
+     </div>
+    
+  </body>
+    {% endblock content %}
 
 
 
-
-
-
+    
+</html>
